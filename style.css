@@ -1,127 +1,239 @@
+body {
+    animation-name: backgroundColorPalette;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 
-
-.slider-wrapper{
-    position: relative;
-    margin: none;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
 }
 
-.slider{
-    display: flex;
-    aspect-ratio: 16 / 9;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75 hsla(0%, 0%, 0%, 0.25);
+@keyframes backgroundColorPalette {
+    0% {
+        background: gainsboro;
+    }
+
+    25% {
+        background: gainsboro;
+    }
+
+    50% {
+        background: gainsboro;
+    }
+
+    75% {
+        background: gainsboro;
+    }
+
+    100% {
+        background: gainsboro;
+    }
 }
 
-.slider img{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
-}
 
-.slider-nav{
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-.slider-nav a {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
+button {
+    margin-top: 0px;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
     background-color: #fff;
-    opacity: 0.75;
-    transition: opacity ease 250ms;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active {
+    transform: translateY(-1px);
+  }
+
+.logo {
+    position: absolute;
+    height: 75px;
+    left: 92%;
+    bottom: 0px;
 }
 
-.slider-nav a:hover{
-    opacity: 1;
+.navbar {
+    height: 75px;
+    z-index: 3;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-.tekst1{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 18px;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-.tekst2{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.navbar a:hover {
+    color: #1c87c9;
 }
 
-.tekst3{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.container {
+    padding: auto;
+    margin-top: 200px;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    text-shadow: 3px 3px 30px;
 }
 
-.tekst4{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.video {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.tekst5{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.audio {
+    text-align: center;
+    margin-top: 0px;
+    color: white;
+    text-shadow: 5px 5px 40px;
 }
 
-.tekst6{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-.tekst7{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.ab {
+    text-align: center;
+    color: black;
+    text-shadow: 3px 3px 10px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
-.tekst8{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.obr {
+    display: flexbox;
+    background-color: rgba(0, 0, 0, 0.479);
+    width: 99vw;
+    height: 600px;
+    z-index: -2;
 }
 
-.tekst9{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+
+.list {
+    left: 50%;
+    margin-left: -225px;
+    position: absolute;
+    width: 400px;
+    border-radius: 20px;
+    color: white;
+    text-shadow: 3px 3px 30px;
+    z-index: 0;
 }
 
-.tekst10{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.img {
+    position: absolute;
+    width: 500px;
+    margin-left: -255px;
+    border-radius: 20px;
+    margin-top: 250px;
+    box-shadow: 3px 3px 10px;
+    color: black;
+    z-index: 0;
 }
 
-.tekst11{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.img:hover {
+    transform: translateY(-7px);
+    transform: translateX(-30px);
+    width: 560px;
 }
 
-.Linia{
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.h1 {
+    font-size: xx-large;
+    text-align: center;
+    text-shadow: 2px 2px 30px;
+    color: black;
 }
+
+.box h4 {
+    font-size: xx-large;
+    text-shadow: 2px 2px 10px;
+    color: black;
+}
+
+.box {
+    perspective: 500px;
+    box-shadow: 3px 3px 10px;
+    color: black;
+}
+
+.box {
+    display: inline-block;
+    width: 200px;
+    height: 320px;
+    background: #ffffff;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform .5s;
+}
+
+.box:hover {
+    transform: translateZ(10px) rotateX(20deg) rotateY(20deg);
+}
+
+.box_title {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    transition: transform .5s;
+    font: 700 1.5rem monospace;
+    text-shadow: -1px -1px 0 rgb(255, 255, 255),
+        1px -1px 0 rgb(255, 255, 255),
+        -1px 1px 0 rgb(255, 255, 255),
+        1px 1px 0 rgb(255, 255, 255);
+}
+
+.box:hover .box_title {
+    transform: translateZ(50px);
+}
+
+.img1 {
+    width: 80px;
+    border-radius: 70px;
+    background: #e0e0e0;
+    box-shadow: inset 50px 50px 56px #b3b3b3,
+        inset -50px -50px 56px #ffffff;
+    box-shadow: 3px 3px 10px;
+    color: black;
+}
+
+
